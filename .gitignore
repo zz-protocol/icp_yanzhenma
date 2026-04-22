@@ -25,3 +25,4 @@ commit_ignore.ps1
 commit_final.ps1
 commit_last.ps1
 commit_complete.ps1
+commit_final_complete.ps1
