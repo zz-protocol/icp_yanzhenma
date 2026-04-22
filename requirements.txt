@@ -1,0 +1,19 @@
+# ICP 备案查询 API - 依赖列表
+
+# 核心依赖
+requests>=2.31.0
+aiofiles>=23.0.0
+
+# 图像处理
+numpy>=1.26.4
+opencv-python>=4.10.0.84
+
+# 数据验证
+pydantic>=2.5.0
+
+# 加密
+cryptography>=42.0.5
+
+# Web 框架（仅 Web 服务使用）
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
