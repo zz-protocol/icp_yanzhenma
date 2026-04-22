@@ -19,5 +19,5 @@ venv/
 env/
 
 # Temporary files
-commit*.bat
-commit*.ps1
+commit.bat
+commit.ps1
