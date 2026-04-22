@@ -21,3 +21,4 @@ env/
 # Temporary files
 commit.bat
 commit.ps1
+commit_ignore.ps1
