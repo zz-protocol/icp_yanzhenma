@@ -217,7 +217,7 @@ MIT License
 ## 作者
 
 OpenCode
-
+验证码偏移计算参考：https://github.com/HG-ha/ICP_Query/
 ## 联系方式
 
 如有问题，请联系项目维护者或提交 Issue。
