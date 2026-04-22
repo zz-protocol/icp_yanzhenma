@@ -102,6 +102,9 @@ curl "http://127.0.0.1:8000/query?domain=qq.com"
 
 
 ## 使用示例
+<img width="1115" height="628" alt="image" src="https://github.com/user-attachments/assets/57d776ec-5f0d-4e67-872c-ac2cd1bff31e" />
+<img width="1485" height="258" alt="image-1" src="https://github.com/user-attachments/assets/357d993b-e5c0-4964-b0fc-18888affeb54" />
+
 
 
 
