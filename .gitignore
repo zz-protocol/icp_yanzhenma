@@ -17,3 +17,7 @@ Thumbs.db
 .env
 venv/
 env/
+
+# Temporary files
+commit.bat
+commit.ps1
