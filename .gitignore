@@ -22,3 +22,4 @@ env/
 commit.bat
 commit.ps1
 commit_ignore.ps1
+commit_final.ps1
