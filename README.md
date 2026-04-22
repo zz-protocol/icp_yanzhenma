@@ -1,11 +1,11 @@
 # ICP 备案查询 API
 
-一个基于 Python FastAPI 的 ICP 备案信息查询系统，支持自动验证码识别与 ICP 项目查询。
+一个基于 Python FastAPI 的 ICP 备案信息查询系统，支持自动验证码识别与http接口形式批量查询域名备案。
 
 ## 功能特性
 
 ✨ **核心功能**
-- 自动获取阿里云/电信/联通 ICP 备案查询 Token
+- 自动获取Token
 - 自动识别滑块验证码
 - 自动计算滑块缺口偏移量
 - 查询单个域名的 ICP 备案信息
@@ -27,7 +27,7 @@
 
 ```bash
 # 克隆或下载项目
-cd D:\h5\icp_yanzhenma_huadong
+cd D:\icp_yanzhenma
 ```
 
 ### 2. 安装依赖
@@ -50,7 +50,7 @@ python web.py
 ### 4. 访问 API
 
 - **健康检查**：http://127.0.0.1:8000/health
-- **查询接口**：http://127.0.0.1:8000/query?domain=qq.com
+- **查询接口**：http://127.0.0.1:8000/query?domain={域名}
 - **接口文档**：http://127.0.0.1:8000/doc
 
 ## API 文档
@@ -99,67 +99,11 @@ curl "http://127.0.0.1:8000/query?domain=qq.com"
 }
 ```
 
-### 2. 健康检查
 
-**接口地址**：`GET /health`
-
-**响应示例**：
-
-```json
-{
-  "status": "healthy",
-  "timestamp": 1775123412,
-  "service": "ICP 备名查询系统"
-}
-```
 
 ## 使用示例
 
-### Python 调用
 
-```python
-import requests
-
-def query_icp(domain):
-    """查询 ICP 备案信息"""
-    url = "http://127.0.0.1:8000/query"
-    params = {"domain": domain}
-
-    response = requests.get(url, params=params)
-    result = response.json()
-
-    if result["status"] == "success":
-        print(f"公司名: {result['company_name']}")
-        print(f"备案号: {result['licenceno']}")
-        print(f"性质: {result['nature']}")
-
-        detail = result['data']['params']['list'][0]
-        print(f"\\n详细信息: {detail}")
-    else:
-        print(f"查询失败: {result['error']}")
-
-# 查询示例
-query_icp("qq.com")
-query_icp("baidu.com")
-query_icp("google.com")
-```
-
-### cURL 调用
-
-```bash
-# 查询 qq.com
-curl "http://127.0.0.1:8000/query?domain=qq.com"
-
-# 查询 baidu.com
-curl "http://127.0.0.1:8000/query?domain=baidu.com"
-```
-
-### Postman 调用
-
-1. 新建 GET 请求
-2. URL: `http://127.0.0.1:8000/query`
-3. 传参：`domain = qq.com`
-4. 点击 Send
 
 ## 项目结构
 
